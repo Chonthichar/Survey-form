@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="proconnect" href="https://fonts.gstatic.com">
+    <link href=https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ 13   <title>survey form</title>
+/
+</head>
+<style>
+    body {
+        min-height: 150vh;
+    }
+    #navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        animation-name: backdiv;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes backdiv {
+        50% {
+            background: #ffe6f2;
+        }
+    }
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        background-color: black;
+    }
+    li {
+        float: right;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a.hover {
+        background-color: black;
+    }
+</style>
+
+<body>
+<nav id="navbar">
+    <ul>
+        <li><a href="https://chonthichar.github.io/web-developer.github.io/"> Change view</a></li>
+        <li><a href="https://chonthichar.github.io/web-developer.github.io/">Sign Up</a></li>
+        <li><a href="https://chonthichar.github.io/web-developer.github.io/">Log in</a><li>
+        <li><a href="https://chonthichar.github.io/web-developer.github.io/" target="_blank"><i class="material-icons">favorite</i> </a></li>
+    </ul>
+</nav>
+</body>
+
+<body>
+<h1 id="title">I would like to invite you for food</h1>
+<p id="description"> Will you go with me?</p>
+
+<form id="survey-form" action="https://formspree.io/f/mbjqklbp" method="POST">
+    <div class="form-control">
+        <label for="name" id="name-label">
+            Name
+        </label><br>
+
+        <input type="text"
+               id="name"
+               placeholder="Please Enter your name here" />
+    </div>
+
+    <div class="form-control">
+        <label for="email" id="email-label">
+            Email
+        </label><br>
+
+        <input type="text"
+               id="email"
+               placeholder="Please enter you email here" />
+    </div>
+
+    <div class="form-control">
+        <label for="number" id="number-label">
+            Favourite Food
+        </label><br>
+
+        <input type="text"
+               id="number"
+               placeholder="Please enter your favourite here" />
+    </div>
+
+    <div class="form-control">
+        <label for="role" id="role-label">
+            Which options do you prefer for dinner?
+        </label>
+        <select name="role" id="role">
+            <option value="chicken">Chicken with Katsunuts</option>
+            <option value="Stegt Flæsk">Stegt Flæsk</option>
+            <option value="BBQ">BBQ Grilling</option>
+            <option value="Papaya">Papaya Salad</option>
+        </select>
+    </div>
+
+    <div class="form-control">
+        <label>
+            Would you prefer dessert after food?
+        </label><br>
+        <label for="recommend-1">
+            <input type="radio"
+                   id="recommend-1"
+                   name="recommend">Sure,yes</input>
+        </label><br>
+        <label for="recommend-1">
+            <input type="radio"
+                   id="recommend-2"
+                   name="prefer">Maybe later</input>
+        </label><br>
+        <label for="recommend-1">
+            <input type="radio"
+                   id="recommend-3"
+                   name="prefer">No,Thanks</input>
+        </label><br>
+    </div>
+
+    <div class="form-control">
+        <label>As you are special person. You can should the best option as you want
+            <small>(You know that i'm the best at cooking)</small></label> <br>
+
+        <input id="very professional" type="radio" name="levels" value="very professional">
+        <label for="very professional">Me as a chef!!</label><br>
+
+        <input id="intermediate" type="radio" name="levels" value="intermediate">
+        <label for="intermediate">Both of us go to market together</label><br>
+
+        <input id="not at all" type="radio" name="levels" value="not at all">
+        <label for="not at all">You allow choose your favourite restaurant</label><br>
+
+        <input id="food" type="radio" name="levels" value="food">
+        <label for="food">I'm the one who choose the restaurant!</label><br>
+
+        <input id="diet" type="radio" name="levels" value="diet">
+        <label for="diet">Both of us are on diet, so no more food for today</label><br>
+    </div>
+
+    <div class="form-control">
+        <label for="write">
+            Please fill out if you have any suggestion
+        </label>
+        <textarea name="write" id="write"
+                  placeholder="You can write anything about food here">
+    </textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div id="status" class="code">Success</div>
+<script src="./main.js"></script>
+</body>
+</html>
